@@ -1,21 +1,21 @@
 #include "../../pch.h"
 #include "../include/brackets.h"
 
-TEST(Balanced, Easy)
+TEST(BracketsCheck, Easy)
 {
     EXPECT_TRUE(isValid("[]"));
     EXPECT_TRUE(isValid("{}"));
     EXPECT_TRUE(isValid("()"));
 }
 
-TEST(Balanced, Subexpressions_Positive)
+TEST(BracketsCheck, Subexpressions_Positive)
 {
     EXPECT_TRUE(isValid("[{()}]"));
     EXPECT_TRUE(isValid("[(){}]"));
     EXPECT_TRUE(isValid("({}[()])"));
 }
 
-TEST(Balanced, OneSymbol)
+TEST(BracketsCheck, OneSymbol)
 {
     EXPECT_FALSE(isValid("["));
     EXPECT_FALSE(isValid("]"));
@@ -25,7 +25,7 @@ TEST(Balanced, OneSymbol)
     EXPECT_FALSE(isValid("}"));
 }
 
-TEST(Balanced, NotClosedOrOpened)
+TEST(BracketsCheck, NotClosedOrOpened)
 {
     EXPECT_FALSE(isValid("[["));
     EXPECT_FALSE(isValid("]]"));
@@ -34,7 +34,7 @@ TEST(Balanced, NotClosedOrOpened)
     EXPECT_FALSE(isValid(")[]("));
 }
 
-TEST(Balanced, AntiCounter)
+TEST(BracketsCheck, AntiCounter)
 {
     EXPECT_FALSE(isValid("(]"));
     EXPECT_FALSE(isValid("(}"));
@@ -42,19 +42,19 @@ TEST(Balanced, AntiCounter)
 
 }
 
-TEST(Balanced, Empty)
+TEST(BracketsCheck, Empty)
 {
     EXPECT_TRUE(isValid(""));
 }
 
-TEST(Balanced, Simple)
+TEST(BracketsCheck, Simple)
 {
     EXPECT_TRUE(isValid("{}"));
     EXPECT_TRUE(isValid("()"));
     EXPECT_TRUE(isValid("[]"));
 }
 
-TEST(Balanced, AdditionalData)
+TEST(BracketsCheck, AdditionalData)
 {
     EXPECT_TRUE(isValid("{a}"));
     EXPECT_TRUE(isValid("(b)"));
@@ -64,7 +64,7 @@ TEST(Balanced, AdditionalData)
     EXPECT_TRUE(isValid("aa"));
 }
 
-TEST(Balanced, Subexpression_Negative)
+TEST(BracketsCheck, Subexpression_Negative)
 {
     EXPECT_FALSE(isValid("([)]"));
     EXPECT_FALSE(isValid("[{({)}]"));
