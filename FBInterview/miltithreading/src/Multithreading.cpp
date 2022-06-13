@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "../include/Multithreading.h"
 
 void WaitAndDoWork(std::vector<int>& InputData, bool& bIsDataReady)

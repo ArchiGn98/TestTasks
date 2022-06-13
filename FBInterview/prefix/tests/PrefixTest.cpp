@@ -1,4 +1,4 @@
-#include "../../pch.h"
+#include "pch.h"
 #include "../include/Prefix.h"
 
 TEST(PrefixCheck, Empty)

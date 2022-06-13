@@ -1,4 +1,4 @@
-#include "../../pch.h"
+#include "pch.h"
 #include "../include/Multithreading.h"
 
 TEST(Multithreading, ConditionVariable)
