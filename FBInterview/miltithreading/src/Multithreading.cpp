@@ -19,7 +19,7 @@ void PrepareData(std::vector<int>& InputData, bool& bIsDataReady)
 
 void WaitAndDoWorkAtomic(std::vector<int>& InputData, std::atomic<bool>& bIsDataReady)
 {
-	// @todo wait for PrepareData method to be executed
+	// @todo wait for PrepareDataAtomic method to be executed
 
 	// do work
 	InputData[1] = 2;
@@ -30,5 +30,5 @@ void PrepareDataAtomic(std::vector<int>& InputData, std::atomic<bool>& bIsDataRe
 	// Prepare data
 	InputData = { 1 , 0, 3 };
 
-	// @todo notify WaitAndDoWork that data is ready
+	// @todo notify WaitAndDoWorkAtomic that data is ready
 }
